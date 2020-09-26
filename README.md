@@ -1,1 +1,11 @@
-# Email-Spoofer
+# Email Spoofer (Proof of Concept)
+
+Spoofs an email with attachment and HTML formatting
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
