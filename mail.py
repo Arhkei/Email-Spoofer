@@ -34,6 +34,7 @@ body = """\
 message.attach(MIMEText(body, "html"))
 filename = "document.pdf"
 
+#Comment out until line 52 if not attaching the file
 with open(filename, "rb") as attachment:
     # Add file as application/octet-stream
     # Email client can usually download this automatically as attachment
@@ -52,5 +53,8 @@ message.attach(part)
 print(message)
 
 # Create secure connection with server and send email
-smtpObj = smtplib.SMTP('')
+smtpObj = smtplib.SMTP('')#Ex. smtpObj = smtplib.SMTP('smtp.office365.com', 587)
+#If required uncomment next two lines for TTLS
+#smtpObj.starttls()
+#smtpObj.login() #Login credentials if required
 smtpObj.sendmail(sender_email, receiver_email, message.as_string())    
